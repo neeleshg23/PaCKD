@@ -1,0 +1,76 @@
+system:
+  traces: ../ML-DPC-S0/LoadTraces 
+  processed: processed 
+  model: model
+  res: res
+
+teacher:
+  number: 3 
+train:
+  epochs: 30 
+  lr: 0.00002
+  gamma: 0.1
+  step-size: 20
+  early-stop: 5 
+  alpha: 0.5
+  temperature: 1
+
+trace-data:
+  train: 8 
+  total: 10 
+  skip: 1 
+  batch-size: 256
+
+model:
+  tch_d:
+    channels: 1
+  tch_r:
+    channels: 1
+    dim: 30
+  tch_v:
+    channels: 1
+    dim: 256
+    depth: 8
+    heads: 10
+    mlp-dim: 256
+  tch_m:
+    channels: 1
+    dim: 512 
+    depth: 20
+  tch_l:
+    input-dim: 100
+    hidden-dim: 128 
+    layer-dim: 40 
+    output-dim: 256
+  stu_d:
+    channels: 1
+  stu_r:
+    channels: 1
+    dim: 4
+  stu_v:
+    channels: 1
+    dim: 16
+    depth: 2
+    heads: 2
+    mlp-dim: 16
+  stu_m:
+    channels: 1
+    dim: 18
+    depth: 8
+  stu_l:
+    input-dim: 100
+    hidden-dim: 16
+    layer-dim: 1
+    output-dim: 256
+
+hardware:
+  block-bits: 6
+  total-bits: 64
+  look-back: 9
+  pred-forward: 128
+  page-bits: 12
+  delta-bound: 128
+  split-bits: 6
+  filter-size: 16
+  bitmap-size: 256 # 2 * delta-bound
+  block-num-bits: 58 # total-bits - block-bits
