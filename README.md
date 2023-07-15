@@ -2,9 +2,9 @@
 PaCKD: Pattern-Clustered Knowledge Distillation for Compressing Memory Access Prediction Models
 
 Cluster options:
-- Past Block Address ('a')
+- Past Block Addresses ('a')
 - Past Block Address Deltas ('d')
-- Past IP ('i')
+- Past IPs ('i')
 
 Models:
 - LSTM ('l')
