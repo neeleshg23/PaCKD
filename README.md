@@ -12,7 +12,7 @@ Models:
 - ResNet ('r')
 
 To run: 
-- Import conda env
+- Import conda env inside of `PaCKD.yaml`
 - Change directories inside of `params.yaml`
 
 To preprocess:
